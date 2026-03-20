@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORIZON · Терминальный комплекс</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="/JS/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-wrapper">
+        <div class="terminal-header">
+            <div class="header-left">
+                <span class="ascii-logo">
+                    ██╗  ██╗ ██████╗ ██████╗ ██╗███████╗ ██████╗ ███╗   ██╗    
+                    ██║  ██║██╔═══██╗██╔══██╗██║╚══███╔╝██╔═══██╗████╗  ██║    
+                    ███████║██║   ██║██████╔╝██║  ███╔╝ ██║   ██║██╔██╗ ██║    
+                    ██╔══██║██║   ██║██╔══██╗██║ ███╔╝  ██║   ██║██║╚██╗██║    
+                    ██║  ██║╚██████╔╝██║  ██║██║███████╗╚██████╔╝██║ ╚████║    
+                    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    
+                </span>
+            </div>
+            <div class="header-right">
+                <span class="status-led"></span>
+                <span id="sessionStatus" class="status-text">ГОСТЬ</span>
+                <span class="separator">|</span>
+                <span id="userDisplay">anonymous</span>
+            </div>
+        </div>
+        
+        <div class="terminal" id="terminal">
+            <div id="output">
+                <div class="system-line">╔════════════════════════════════════════════════════════════╗</div>
+                <div class="system-line">║               HORIZON TERMINAL v2.0.1984                   ║</div>
+                <div class="system-line">║            Центральный информационный комплекс             ║</div>
+                <div class="system-line">╚════════════════════════════════════════════════════════════╝</div>
+                <div class="info-line">> Система инициализирована</div>
+                <div class="info-line">> Введите '/horizon help' для списка команд</div>
+                <div class="separator-line"></div>
+            </div>
+            
+            <div class="input-container">
+                <span class="prompt" id="prompt">⟫</span>
+                <input type="text" id="commandInput" placeholder="введите команду..." autofocus spellcheck="false">
+            </div>
+        </div>
+        
+        <div class="terminal-footer">
+            <span>СЕССИЯ: <span id="sessionId">TMP-XXXX</span></span>
+            <span>УЗЛОВ: <span id="nodeCount">0</span></span>
+            <span>ВРЕМЯ: <span id="currentTime">00:00:00</span></span>
+        </div>
+    </div>
+    
+    <!-- CRT эффекты -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+</body>
+</html>
